@@ -1,0 +1,35 @@
+/* Box Styles */
+.box {
+    width: 10rem;
+    height: 10rem;
+    background-color: #ffffff;
+    border: 2px solid #6200ee;
+    border-radius: 8px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 2rem 2rem 2rem 2rem;
+}
+
+/* Box Item Styles */
+.box-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
+
+.label {
+    font-weight: bold;
+    color: #6200ee;
+    margin-right: 0.25re;
+    font-size: 0.75rem;
+}
+
+.value {
+    color: #333;
+    font-size: 0.75rem;
+}

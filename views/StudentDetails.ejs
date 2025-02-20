@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Structure</title>
+    <link rel="stylesheet" href="/css/StudentDetails.css">
+    <link rel="stylesheet" href="/css/HomePage.css">
+
+
+</head>
+
+<body>
+    <%- include("includes/commonCode.ejs") %>
+        <% for (let StuDetails of StudentDetails) { %>
+            <div class="box">
+                <div class="box-item">
+                    <span class="label">Name:</span>
+                    <span class="value">
+                        <%=StuDetails.name%>
+                    </span>
+                </div>
+                <div class="box-item">
+                    <span class="label">Age:</span>
+                    <span class="value">25</span>
+                </div>
+                <div class="box-item">
+                    <span class="label">Location:</span>
+                    <span class="value">New York</span>
+                </div>
+            </div>
+            <%}%>
+</body>
+
+</html>
