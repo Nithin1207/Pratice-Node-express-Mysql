@@ -1,21 +1,24 @@
-const db = require("../util/database");
+const mongoose = require("mongoose");
 
-module.exports = class Student {
-    constructor(name, age, email, location) {
-        this.name = name;
-        this.age = age;
-        this.email = email;
-        this.location = location;
-    }
+const Schema = mongoose.Schema;
 
-    save() {
-        return db.execute(
-            "INSERT INTO StudentDetails (name, age, email, location) VALUES (?,?,?,?)",
-            [this.name, this.age, this.email, this.location]
-        );
+const ProductSchema = new Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    age: {
+        type: Number,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    location: {
+        type: String,
+        required: true
     }
+});
 
-    static fetchDetails() {
-        return db.execute("SELECT * FROM StudentDetails");
-    }
-};
+module.exports = mongoose.model("StudentData", ProductSchema);

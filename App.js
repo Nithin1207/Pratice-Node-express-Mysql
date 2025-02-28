@@ -7,6 +7,7 @@ const signUp = require("./routes/signUp")
 const homePage = require("./routes/HomePage")
 const StudentDetails = require("./routes/StudentDetails")
 
+const mongoose = require("mongoose")
 
 
 
@@ -23,7 +24,9 @@ app.use(StudentDetails)
 app.use(homePage)
 
 
-app.listen(3000)
+mongoose.connect("mongodb+srv://nithinkumarputti:Nithin@ecommerce.5npsg.mongodb.net/?retryWrites=true&w=majority&appName=Ecommerce")
+    .then((result) => { app.listen(3000) })
+    .catch((err) => { console.log(err) })
 
 
 
